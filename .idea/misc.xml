@@ -5,10 +5,12 @@
       <map>
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout-v21/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/activity_home.xml" value="0.2359375" />
-        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/drawer_header.xml" value="0.25" />
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/fragment_files.xml" value="0.25" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/home.xml" value="0.25" />
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/home_recycler.xml" value="0.25" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/menu/menu_drawer.xml" value="0.25" />
       </map>
     </option>

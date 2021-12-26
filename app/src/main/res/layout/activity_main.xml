@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4350C6"
     tools:context=".Activity.MainActivity">
 
     <TextView
@@ -12,8 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/shareit"
-        android:textSize="48dp"
+        android:textSize="80dp"
+        android:fontFamily="cursive"
         android:layout_centerInParent="true"
-        android:textColor="#00B8D4"/>
+        android:textColor="#FFFFFF"/>
 
 </RelativeLayout>
