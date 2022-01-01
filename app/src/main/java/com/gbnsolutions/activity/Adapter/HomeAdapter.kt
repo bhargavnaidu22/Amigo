@@ -21,8 +21,8 @@ class HomeAdapter(val Activities: ArrayList<ListofActivities>) :RecyclerView.Ada
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val activities: ListofActivities =Activities[position]
-        holder.Activityname.text=activities.getActivityname()
+        val activities: ListofActivities = Activities[position]
+        holder.Activityname.text = activities.getActivityname()
     }
 
     override fun getItemCount(): Int {

@@ -21,11 +21,22 @@
             android:layout_height="wrap_content"
             android:minHeight="56dp"
             app:layout_scrollFlags="scroll|enterAlways">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/pname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="24dp"
                 android:text="Amigo"/>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_launcher_foreground"/>
+            </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
         <FrameLayout

@@ -57,7 +57,7 @@ class Home : AppCompatActivity() {
                     openHome()
                     drawerLayout.closeDrawers()
                 }
-                R.id.files -> {
+                R.id.events -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.frame, FilesFragment())
                         .commit()
