@@ -1,4 +1,4 @@
-package com.gbnsolutions.activity
+package com.gbnsolutions.activity.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +10,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.gbnsolutions.activity.Fragments.*
+import com.gbnsolutions.activity.R
 import com.google.android.material.navigation.NavigationView
 
 class Home : AppCompatActivity() {
@@ -28,6 +30,7 @@ class Home : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
         coordinatorLayout = findViewById(R.id.coordinatelayout)
         frameLayout = findViewById(R.id.frame)
+
 //        profile = findViewById(R.id.profile)
 //        profile.setImageResource(R.drawable.ic_launcher_foreground)
         setUPtoolbar()
@@ -62,6 +65,34 @@ class Home : AppCompatActivity() {
                         .replace(R.id.frame, FilesFragment())
                         .commit()
                     supportActionBar?.title = "Files"
+                    drawerLayout.closeDrawers()
+                }
+                R.id.profile -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frame, ProfileFragment())
+                        .commit()
+                    supportActionBar?.title = "Profile"
+                    drawerLayout.closeDrawers()
+                }
+                R.id.mycources -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frame, MyCoursesFragment())
+                        .commit()
+                    supportActionBar?.title = "My Courses"
+                    drawerLayout.closeDrawers()
+                }
+                R.id.settings -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frame, SettingsFragment())
+                        .commit()
+                    supportActionBar?.title = "Profile"
+                    drawerLayout.closeDrawers()
+                }
+                R.id.support -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frame, SupportFragment())
+                        .commit()
+                    supportActionBar?.title = "Profile"
                     drawerLayout.closeDrawers()
                 }
             }

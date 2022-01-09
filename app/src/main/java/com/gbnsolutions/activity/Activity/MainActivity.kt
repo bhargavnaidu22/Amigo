@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.gbnsolutions.activity.Home
 import com.gbnsolutions.activity.R
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         Handler().postDelayed({main()},3000)
     }
     private fun main(){
-        startActivity(Intent(this, Home::class.java))
+        startActivity(Intent(this, Login::class.java))
         finish()
     }
 }

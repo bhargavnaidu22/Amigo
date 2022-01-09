@@ -14,7 +14,7 @@ class InnerAdapter(val context: Context,val arrayList: ArrayList<TypesofActiviti
         RecyclerView.Adapter<InnerAdapter.Opt>(){
             class Opt(view: View): RecyclerView.ViewHolder(view){
                 val image: ImageView = view.findViewById(R.id.image)
-                val text: TextView = view.findViewById(R.id.name)
+                val textfield: TextView = view.findViewById(R.id.name)
             }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Opt {
@@ -25,7 +25,7 @@ class InnerAdapter(val context: Context,val arrayList: ArrayList<TypesofActiviti
     override fun onBindViewHolder(holder: Opt, position: Int) {
         val Inner = arrayList[position]
         holder.image.setImageResource(R.drawable.ic_launcher_foreground)
-        holder.text.text = Inner.getName()
+        holder.textfield.text = Inner.getName()
     }
 
     override fun getItemCount(): Int {

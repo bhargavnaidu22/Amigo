@@ -1,17 +1,21 @@
-package com.gbnsolutions.activity
+package com.gbnsolutions.activity.Fragments
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.gbnsolutions.activity.Activity.Notes
 import com.gbnsolutions.activity.Adapter.HomeAdapter
 import com.gbnsolutions.activity.Model.ListofActivities
+import com.gbnsolutions.activity.R
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -23,6 +27,7 @@ class HomeFragment : Fragment() {
     lateinit var HomeAdapter1 : HomeAdapter
     lateinit var Activities: ArrayList<ListofActivities>
     lateinit var check: TextView
+    lateinit var note: Button
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,6 +35,10 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         listofactivities = view.findViewById(R.id.listofactivities)
         layoutmanager = LinearLayoutManager(activity)
+        note = view.findViewById(R.id.note)
+        note.setOnClickListener {
+            startActivity(Intent(context,Notes::class.java))
+        }
 //        check = view.findViewById(R.id.print)
         Activities = ArrayList()
         getItems()

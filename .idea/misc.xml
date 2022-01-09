@@ -3,15 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/drawable/background.xml" value="0.26205128205128203" />
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/drawable/ic_add_note.xml" value="0.26205128205128203" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout-v21/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/activity_notes.xml" value="0.2359375" />
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/activity_notes_maker.xml" value="0.25" />
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/drawer_header.xml" value="0.25" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/fragment_files.xml" value="0.25" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/fragment_my_courses.xml" value="0.2359375" />
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/fragment_support.xml" value="0.2359375" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/home.xml" value="0.25" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/home_recycler.xml" value="0.25" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/inner_recycler_home.xml" value="0.25" />
+        <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/layout/notes_recycler.xml" value="0.25" />
         <entry key="..\:/Users/bharg/AndroidStudioProjects/Activity/app/src/main/res/menu/menu_drawer.xml" value="0.25" />
       </map>
     </option>
