@@ -63,6 +63,10 @@ class Notes : AppCompatActivity() {
             }
         })
     }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
     fun setUPtoolbar(){
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Amigo"

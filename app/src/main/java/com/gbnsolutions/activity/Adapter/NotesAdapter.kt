@@ -28,7 +28,7 @@ class NotesAdapter(val context: Context,val noteslist: ArrayList<NotesMoel>) :
         holder.title.text = note.gettitle()
         holder.description.text = note.getdescription()
         holder.description.setOnClickListener {
-            context.startActivity(Intent(context,NotesMaker::class.java))
+
         }
     }
 

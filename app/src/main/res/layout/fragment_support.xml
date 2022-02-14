@@ -3,12 +3,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.SupportFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/gbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/info"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/more"
+        android:layout_below="@+id/gbn"
+        android:text="@string/more"
+        android:textColor="@color/more"
+        android:padding="15dp"/>
+    <Button
+        android:id="@+id/more"
+        android:layout_below="@+id/gbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_about"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:id="@+id/Contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:textColor="#357a36"
+        android:layout_marginTop="120dp"
+        android:paddingBottom="5dp"
+        android:layout_centerHorizontal="true" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Contact"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+    <Button
+        android:id="@+id/check"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Support" />
+        android:layout_height="wrap_content"
+        android:text="@string/check_internet"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple_500"
+        android:layout_marginBottom="56dp"/>
 
 </RelativeLayout>

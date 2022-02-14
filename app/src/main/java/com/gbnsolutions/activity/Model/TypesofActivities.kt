@@ -3,10 +3,12 @@ package com.gbnsolutions.activity.Model
 class TypesofActivities {
     private var Name: String = ""
     private var Activityname: String = ""
+    private var Img: String = ""
 
-    constructor(Name: String,Activity: String) {
+    constructor(Name: String,Activity: String, Img: String) {
         this.Name = Name
         this.Activityname = Activityname
+        this.Img = Img
     }
 
     constructor()
@@ -21,5 +23,11 @@ class TypesofActivities {
     }
     fun setActivity(Activity: String){
         this.Activityname = Activityname
+    }
+    fun getImg(): String?{
+        return Img
+    }
+    fun setImg(Img: String){
+        this.Img = Img
     }
 }

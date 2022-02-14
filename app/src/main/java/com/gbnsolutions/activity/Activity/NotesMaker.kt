@@ -20,17 +20,21 @@ class NotesMaker : AppCompatActivity() {
         title = findViewById(R.id.title)
         description = findViewById(R.id.description)
         add = findViewById(R.id.add)
-        titleval  = title.text.toString().trim { it <= ' ' }
-        descriptionval = description.text.toString().trim{ it <= ' ' }
+        titleval = title.text.toString().trim { it <= ' ' }
+        descriptionval = description.text.toString().trim { it <= ' ' }
         add.setOnClickListener {
-            val ref = FirebaseDatabase.getInstance().reference.child("Notes")
-            val random: String? =ref.push().key
-            val notehashmap =HashMap<String,Any>()
-            notehashmap["title"] = title.text.toString().trim { it <= ' ' }
-            notehashmap["description"] = description.text.toString().trim { it <= ' ' }
-            ref.child(random!!).updateChildren(notehashmap).addOnCompleteListener {task->
-                if (task.isSuccessful){
-                    Toast.makeText(this,"Note Created",Toast.LENGTH_SHORT).show()
+            if (titleval=="" && descriptionval=="") {
+                Toast.makeText(this,"Enter title and description for notes",Toast.LENGTH_SHORT).show()
+            } else {
+                val ref = FirebaseDatabase.getInstance().reference.child("Notes")
+                val random: String? = ref.push().key
+                val notehashmap = HashMap<String, Any>()
+                notehashmap["title"] = title.text.toString().trim { it <= ' ' }
+                notehashmap["description"] = description.text.toString().trim { it <= ' ' }
+                ref.child(random!!).updateChildren(notehashmap).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "Note Created", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         }

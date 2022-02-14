@@ -39,8 +39,9 @@ class Register : AppCompatActivity() {
         conpassword = findViewById(R.id.editTextConfirmPasswordField)
         register = findViewById(R.id.buttonRegister)
         relogin = findViewById(R.id.login)
+        mAuth = FirebaseAuth.getInstance()
         relogin.setOnClickListener {
-            val i = Intent(this@Register,Home::class.java)
+            val i = Intent(this@Register,Login::class.java)
             startActivity(i)
         }
         register.setOnClickListener(View.OnClickListener {
@@ -85,24 +86,29 @@ class Register : AppCompatActivity() {
         })
     }
     private fun a(){
-        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener (this@Register){
+        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener (
+            this@Register
+        ){
             it-> if (it.isSuccessful){
                 firebaseUserID = mAuth.currentUser!!.uid
-            refUsers = FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUserID)
-            val userHashMap = HashMap<String, Any>()
-            userHashMap["uid"] = firebaseUserID
-            userHashMap["jntunumber"] = jntu.getText().toString().trim { it <= ' ' }
-            userHashMap["name"] = username.getText().toString().trim { it <= ' ' }
-            userHashMap["email"] = emailId.getText().toString().trim { it <= ' ' }
-            refUsers.updateChildren(userHashMap)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful){
-                        startActivity(Intent(this@Register,Home::class.java))
-                    }else{
-                        Toast.makeText(this@Register,"Error",Toast.LENGTH_SHORT).show()
+                refUsers = FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUserID)
+                val userHashMap = HashMap<String, Any>()
+                userHashMap["uid"] = firebaseUserID
+                userHashMap["jntunumber"] = jntu.getText().toString().trim { it <= ' ' }
+                userHashMap["name"] = username.getText().toString().trim { it <= ' ' }
+                userHashMap["email"] = emailId.getText().toString().trim { it <= ' ' }
+                refUsers.updateChildren(userHashMap)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful){
+                            startActivity(Intent(this@Register,Home::class.java))
+                        }else{
+                            Toast.makeText(this@Register,"Error",Toast.LENGTH_SHORT).show()
+                        }
                     }
-                }
-        }
+            }
+            else{
+                Toast.makeText(this@Register,it.toString(),Toast.LENGTH_LONG).show()
+            }
         }
     }
 //    private operator fun next() {

@@ -6,4 +6,9 @@
     <string name="open_drawer">open</string>
     <string name="close_drawer">close</string>
     <string name="preference_file_name">preference</string>
+
+    <string name="info">Developed By GDSC</string>
+    <string name="more">Learn more</string>
+    <string name="check_internet">check internet</string>
+    <string name="contact">Contact</string>
 </resources>
